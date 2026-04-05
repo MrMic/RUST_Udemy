@@ -1,26 +1,55 @@
 #![allow(unused_variables)]
 
+/*
+    - Functions
+    - Code Blocks
+*/
+// ______________________________________________________________________
+fn my_fn(s: &str) {
+    println!("{s}!");
+}
+
+// ______________________________________________________________________
+fn multiplication(x: i32, y: i32) -> i32 {
+    println!("Multiplying {x} * {y}"); // INFO: STATEMENT
+    x * y // INFO: EXPRESSION
+}
+
+// ______________________________________________________________________
+fn basic_math(num1: i32, num2: i32) -> (i32, i32, i32, f64) {
+    let sum = num1 + num2;
+    let difference = num1 - num2;
+    let product = num1 * num2;
+    let quotient = num1 as f64 / num2 as f64;
+    (sum, difference, product, quotient)
+}
+
+// INFO: EXPRESSION vs STATEMENTS _______________________________________
+// INFO: EXPRESSION is something that evaluates to a valid value.
+// INFO: STATEMENT is something that performs an action but does not return a value => a unit value
+
+// ______________________________________________________________________
 fn main() {
-    // INFO: COMPOUND DATA TYPES
+    // my_fn("This my function");
+    let str = "This is my function";
+    my_fn(str);
 
-    // Strings
-    let fixed_str = "Fixed length string"; // WARN: IMMUTABLE!
-    // WARN: String can grow/shrink
-    let mut flexible_str = String::from("Flexible length string");
-    flexible_str.push_str(" appended");
+    let result = multiplication(5, 10);
+    println!("The result is: {result}");
 
-    // Arrays
-    let mut array_1: [i32; 5] = [1, 2, 3, 4, 5];
-    println!("{:?}", array_1[0]);
-    println!("{:?}", array_1);
+    let (sum, difference, product, quotient) = basic_math(10, 5);
+    println!("Sum: {sum}");
+    println!("Difference: {difference}");
+    println!("Product: {product}");
+    println!("Quotient: {quotient}");
 
-    // Vectors - WARN: Can grow and shrink!
-    let vec_1 = vec![1, 2, 3, 4, 5];
-
-    // Tuples
-    let my_info = ("salary", 40000, "Age", 25);
-    let (salary, salary_value, age, age_value) = my_info; // WARN: DESTRUCTURING 
-
-    // Empty Tuple - Not cosume any memory
-    let unit = ();
+    // INFO: Code Blocks
+    let full_name = {
+        let first_name = "John";
+        let last_name = "Doe";
+        println!("First Name: {first_name}");
+        // INFO: Code block can also return values like functions
+        format!("{first_name} {last_name}")
+    };
+    // println!("First Name: {first_name}"); // Inaccessible outside the block
 }
