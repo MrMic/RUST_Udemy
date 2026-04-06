@@ -1,26 +1,30 @@
 #![allow(unused_variables)]
 
 /*
-    Conditional
-    - If else
-    - If else if ladder
-    - Match
+    Loops
 
 */
 
 fn main() {
-    // Match
-    let marks = 95;
-    // let mut grade = 'N';
+    'outer: loop {
+        loop {
+            println!("This is an infinite loop");
+            break 'outer; // Exit the outer loop
+        }
+    }
 
-    let grade = match marks {
-        90..=100 => 'A',
-        80..=89 => 'B',
-        70..=79 => 'C',
-        60..=69 => 'D',
-        0..=59 => 'F',
-        _ => 'N', // Default case
+    let a = loop {
+        println!("This loop will return a value");
+        break 42; // Return the value 42 from the loop
     };
 
-    println!("Grade: {}", grade);
+    // while loop
+    let mut count = 0;
+    while count < 5 {
+        println!("Count: {}", count);
+        count += 1;
+    }
+
+    // INFO: Compound Data: Arrays and Tuples - Fixed-size collections of values
+    // INFO: Collections: Vectors and HashMaps - Dynamic collections of values (grow/shrink)
 }
