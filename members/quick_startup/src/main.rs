@@ -1,44 +1,48 @@
 #![allow(unused_variables)]
 
 /*
-    Loops
-
+    - Variables Convention
+        - Variables should be in snake_case, which means all lowercase letters with underscores separating words.
+        - Variables should not start with a number or contain special characters (except for underscores).
+        - Variables should not be reserved keywords in Rust (e.g., let, fn, if, else, etc.).
+    - Unused Variables Convention
+        - If a variable is declared but not used, it should be prefixed with an underscore (_) to indicate that it is intentionally unused.
+    - Statics
 */
 
 fn main() {
-    // WARN: start..end or start..=end is only computed when start < end.
-    // WARN: If start >= end, the *range* will be empty and the loop will not execute.
-    // INFO: Iterating over a range of values in a ascending order
-    for i in 0..=5 {
-        println!("i: {}", i);
-    }
+    // - Variable Convention
+    // let x = 0;
+    let _x = 10_000;
 
-    println!("-------------------------------");
-    // INFO: Iterating over a *range* of values in a descending order
-    for i in (0..=5).rev() {
-        println!("i: {}", i);
-    }
+    // Statics are similar to constants
+    /*
+      INFO:
+      const — compile-time value, inlined everywhere
+      const PI: f32 = 3.14159;
+      - Value is inlined at every use site by the compiler (like a #define in C)
+      - No memory address — it doesn't exist at runtime as a variable
+      - Can be used in const contexts (array sizes, match arms, generic params)
+      - Zero runtime overhead
 
-    println!("-------------------------------");
-    // INFO: Iterating over a *range* of values with a step
-    for i in (0..=10).step_by(2) {
-        println!("i: {}", i);
-    }
+        INFO:
+      static — a fixed memory location
+      static MAX_POINTS: u32 = 100_000;
+      - Lives at a fixed memory address for the entire program lifetime
+      - Has a real address you can take (&MAX_POINTS)
+      - Required for static mut (mutable global state — needs unsafe)
+      - Needed for FFI or when a stable address is required
 
-    println!("-------------------------------");
-    // INFO: Iterating over a *range* of values with a step in reverse order
-    for i in (0..=10).rev().step_by(2) {
-        println!("i: {}", i);
-    }
+      static is the right choice only when you specifically need:
+          - A stable memory address
+          - Global shared state (prefer OnceLock or LazyLock over static mut)
+          - Large data (e.g., a static byte array) you don't want copied everywhere
+    */
 
-    // WARN: for i in 0.0..=5.0 { ... } is not valid because ranges in Rust only work with integer types.
+    // static MAX_POINTS: u32 = 100_000;
+    static _MAX_POINTS: u32 = 100_000;
+    const PI: f32 = std::f32::consts::PI;
 
-    // INFO: .. is a valid type.
-    let range = ..;
-
-    println!("-------------------------------");
-    let pairs = vec![(1, "one"), (2, "two"), (3, "three")];
-    for (number, word) in pairs {
-        println!("{}: {}", number, word);
-    }
+    let a = PI;
+    let b = PI;
 }
