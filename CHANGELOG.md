@@ -1,5 +1,15 @@
 ## [unreleased]
 
+### 🐛 Bug Fixes
+
+- *(ci)* Remplace git-cliff-action par install-action pour éviter Debian Buster EOL
+- *(ci)* Accorde contents:write au job changelog pour autoriser le push
+
+### ⚙️ Miscellaneous Tasks
+
+- *(release)* Ajoute workflow_dispatch pour déclenchement manuel
+## [1.31] - 2026-04-26
+
 ### 🚀 Features
 
 - *(quick_startup)* Initial commit
@@ -24,3 +34,4 @@
 - *(github-actions)* Ajoute un rapport quotidien automatisé via Claude
 - *(daily-report)* Fix OIDC permissions and add workflow_dispatch
 - *(workspace)* Add ownership crate to workspace
+- *(ci)* Ajoute la génération automatique du changelog avec git-cliff
