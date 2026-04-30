@@ -1,4 +1,18 @@
-## [unreleased]
+## [4.34.2] - 2026-04-30
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Add workflow to update CHANGELOG.md on every push to main
+## [4.34.1] - 2026-04-30
+
+### 🚀 Features
+
+- *(borrowing)* Add borrowing crate with NLL and borrow rules examples
+## [1.31.2] - 2026-04-26
+
+### 🚀 Features
+
+- *(ci)* Crée une GitHub Release avec le changelog à chaque tag v*
 
 ### 🐛 Bug Fixes
 
@@ -8,6 +22,7 @@
 ### ⚙️ Miscellaneous Tasks
 
 - *(release)* Ajoute workflow_dispatch pour déclenchement manuel
+- *(changelog)* Mise à jour automatique
 ## [1.31] - 2026-04-26
 
 ### 🚀 Features
