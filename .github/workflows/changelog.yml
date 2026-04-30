@@ -1,0 +1,40 @@
+# .github/workflows/changelog.yml
+name: Changelog
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  changelog:
+    name: Update CHANGELOG.md
+    runs-on: ubuntu-latest
+    # Skip if the commit was made by the bot (avoids infinite loop)
+    if: github.actor != 'github-actions[bot]'
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install git-cliff
+        uses: taiki-e/install-action@v2
+        with:
+          tool: git-cliff
+
+      - name: Generate changelog
+        run: git-cliff --config cliff.toml --verbose -o CHANGELOG.md
+        env:
+          GITHUB_REPO: ${{ github.repository }}
+
+      - name: Commit changelog
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add CHANGELOG.md
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "chore(changelog): update CHANGELOG.md"
+          git push
