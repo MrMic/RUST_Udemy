@@ -3,41 +3,53 @@
 //          ╭─────────────────────────────────────────────────────────╮
 //          │                        BORROWING                        │
 //          ╰─────────────────────────────────────────────────────────╯
-// - Borrowing Rules:
-// 1. At any given time, you can have either one mutable reference or any number
-//  of immutable references.
-//  2. References must always be valid.
+//  Borrowing in Functions:
+//    - Functions that immutably borrow values
+//    - Functions that mutably borrow values
+//    - Functions that not uses borrow but return it
+//    - Functions that uses mixed types of borrows
 //
-// INFO:
-// --------------------------------------------------------------------
-//  - Solve out 2 problems:
-//  1. Data races
-//  2. Dangling references
 // --------------------------------------------------------------------
 
+// ______________________________________________________________________
+fn borrows_vec(vec: &Vec<i32>) {
+    println!("Borrowed vector: {:?}", vec);
+}
+
+// ______________________________________________________________________
+fn mutably_borrows_vec(vec: &mut Vec<i32>) {
+    vec.push(10);
+    println!("Mutably borrowed vector: {:?}", vec);
+}
+
+// ______________________________________________________________________
+fn mixed_borrows(subject: &String, scores: &mut Vec<i32>) {
+    println!("{} before update: {:?}", subject, scores);
+    scores.push(100);
+    println!("{} after update: {:?}", subject, scores);
+}
+
+// ──────────────────────────────────────────────────────────────────────
 fn main() {
-    let mut vec_1 = vec![1, 2, 3];
+    // NOTE: Functions that immutably borrow values
+    let vec1 = vec![1, 2, 3];
+    let ref1 = &vec1;
+    borrows_vec(ref1);
+    println!("Original vector after borrowing: {:?}", vec1);
 
-    // WARN:
-    // - Non-Lexical Lifetimes (NLL): borrows end at last use, not end of scope.
-    // Without the println!, ref1 is never used after creation → its borrow ends
-    // here, before ref2 is created → no overlap → compiles fine.
-    // - With the println!, both ref1 and ref2 must be alive at the same time
-    // (same statement) → two active &mut → borrow checker error.
-    let ref1 = &mut vec_1; // borrow starts — ends here if ref1 is never used again
-    // let ref2 = &mut vec_1; // OK only if ref1's borrow already ended
-    // println!("ref1: {:?}, ref2: {:?}", ref1, ref2); // both alive here → ERROR
-    println!("ref1: {:?}", ref1);
+    println!("---------------------------------------------");
+    // NOTE: Functions that mutably borrow values
+    let mut vec2 = vec![4, 5, 6];
+    let ref2 = &mut vec2;
+    mutably_borrows_vec(ref2);
+    println!("Original vector after mutable borrowing: {:?}", vec2);
 
-    let ref3 = &vec_1; // OK: immutable borrow starts here
-    let ref4 = &vec_1;
-    println!("ref3: {:?}, ref4: {:?}", ref3, ref4);
+    // NOTE: Functions that not uses borrow but return it
+    // Will be covered later under the topic of lifetimes
 
-    // WARN: Scope of ref3 & ref4 end here, so we can create a new mutable reference after this point.
-    let ref5 = &mut vec_1; // OK: mutable borrow starts here, after ref3 & ref4's borrows ended
-
-    let vec_3 = {
-        let vec_2 = vec![4, 5, 6];
-        // &vec_2 // FIXME: vec_2 is dropped at the end of this block, so ref to it becomes dangling
-    };
+    println!("---------------------------------------------");
+    // NOTE: Functions that uses mixed types of borrows
+    let subject = String::from("Math");
+    let mut scores = vec![85, 90, 95];
+    mixed_borrows(&subject, &mut scores);
 }
