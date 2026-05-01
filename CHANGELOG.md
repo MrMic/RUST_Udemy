@@ -1,3 +1,12 @@
+## [4.34.3] - 2026-05-01
+
+### 🚀 Features
+
+- *(borrowing)* Add borrowing-in-functions examples
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Update CHANGELOG.md
 ## [4.34.2] - 2026-04-30
 
 ### ⚙️ Miscellaneous Tasks
