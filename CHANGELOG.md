@@ -1,3 +1,12 @@
+## [4.35.1] - 2026-05-02
+
+### 🚀 Features
+
+- *(dereferencing)* Add dereferencing crate with stack and heap examples
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Update CHANGELOG.md
 ## [4.34.3] - 2026-05-01
 
 ### 🚀 Features
