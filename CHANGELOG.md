@@ -1,3 +1,12 @@
+## [5.38.1] - 2026-05-03
+
+### 🚀 Features
+
+- *(structs-basics)* Add structs basics crate with named, tuple, and unit structs
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Update CHANGELOG.md
 ## [4.35.1] - 2026-05-02
 
 ### 🚀 Features
