@@ -20,7 +20,7 @@ struct Car {
 }
 
 struct Point2D(i32, i32); // Tuple struct
-struct Point_3D(i32, i32, i32); // Tuple struct
+struct Point3D(i32, i32, i32); // Tuple struct
 fn main() {
     let mut my_car = Car {
         owner: String::from("Alice"),
@@ -48,10 +48,10 @@ fn main() {
     // ╾────────────────────────────────────────────────────────────────────╼
     // NOTE: Tuple struct
     let point_2D = (1, 2); // Tuple
-    let point_3D = (3, 4, 5); // Tuple
+    let point3D = (3, 4, 5); // Tuple
 
     let point1 = Point2D(1, 2);
-    let point2 = Point_3D(3, 4, 5);
+    let point2 = Point3D(3, 4, 5);
     println!("Point 2D: ({}, {})", point1.0, point1.1);
 
     // ╾────────────────────────────────────────────────────────────────────╼
