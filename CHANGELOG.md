@@ -1,3 +1,12 @@
+## [unreleased]
+
+### 🐛 Bug Fixes
+
+- *(typo)* Fix declaration of struct
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Update CHANGELOG.md
 ## [5.38.1] - 2026-05-03
 
 ### 🚀 Features
