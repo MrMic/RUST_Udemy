@@ -1,8 +1,14 @@
 ## [unreleased]
 
+### 🚀 Features
+
+- *(structs-basics)* Implement methods and associated functions
+## [5.38.2] - 2026-05-08
+
 ### 🐛 Bug Fixes
 
 - *(typo)* Fix declaration of struct
+- *(clippy)* Silence dead_code warnings in example crates
 
 ### ⚙️ Miscellaneous Tasks
 
@@ -10,6 +16,7 @@
 - *(changelog)* Update CHANGELOG.md
 - *(hooks)* Add lefthook pre-commit configuration
 - *(security)* Add GitHub Actions security workflow
+- *(changelog)* Update CHANGELOG.md
 - *(changelog)* Update CHANGELOG.md
 ## [5.38.1] - 2026-05-03
 
