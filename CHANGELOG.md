@@ -1,8 +1,12 @@
-## [unreleased]
+## [5.40.1] - 2026-05-08
 
 ### 🚀 Features
 
 - *(structs-basics)* Implement methods and associated functions
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Update CHANGELOG.md
 ## [5.38.2] - 2026-05-08
 
 ### 🐛 Bug Fixes
