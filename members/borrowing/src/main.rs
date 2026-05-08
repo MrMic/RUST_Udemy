@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 // INFO:
 // -------------------------------------------------------------------
 //          ╭─────────────────────────────────────────────────────────╮
@@ -48,5 +50,5 @@ fn main() {
     // Will be covered later under the topic of lifetimes
 
     // NOTE: Functions that uses mixed types of borrows
-    let subject = String::from("Math");
+    let _subject = String::from("Math");
 }

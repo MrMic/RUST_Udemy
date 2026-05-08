@@ -51,6 +51,7 @@ fn takes_and_returns_ownership(mut vec: Vec<i32>) -> Vec<i32> {
 }
 
 // ______________________________________________________________________
+#[allow(unused_assignments)]
 fn stack_function(mut var: i32) {
     var = 56;
     println!("--> 👉️ var in stack_function, is now: {}", var);
