@@ -47,9 +47,6 @@ fn main() {
     // NOTE: Functions that not uses borrow but return it
     // Will be covered later under the topic of lifetimes
 
-    println!("---------------------------------------------");
     // NOTE: Functions that uses mixed types of borrows
     let subject = String::from("Math");
-    let mut scores = vec![85, 90, 95];
-    mixed_borrows(&subject, &mut scores);
 }
