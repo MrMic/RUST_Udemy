@@ -10,6 +10,7 @@
 - *(changelog)* Update CHANGELOG.md
 - *(hooks)* Add lefthook pre-commit configuration
 - *(security)* Add GitHub Actions security workflow
+- *(changelog)* Update CHANGELOG.md
 ## [5.38.1] - 2026-05-03
 
 ### 🚀 Features
