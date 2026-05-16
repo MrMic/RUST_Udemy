@@ -1,10 +1,10 @@
-/*
-* INFO: ------------------------------------
-* Ownership in Functions
-*  - Functions that take ownership
-*  - Functions that give ownership
-*  - Functions that take and gives ownership
-*  -----------------------------------------
+/*!
+*  INFO: ------------------------------------
+*  Ownership in Functions
+*   - Functions that take ownership
+*   - Functions that give ownership
+*   - Functions that take and gives ownership
+*   -----------------------------------------
 */
 
 fn main() {
