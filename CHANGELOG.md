@@ -1,3 +1,12 @@
+## [5.41.1] - 2026-05-16
+
+### 🚀 Features
+
+- *(enums)* Add Enums crate with enum basics and methods
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Mise à jour automatique
 ## [5.40.1] - 2026-05-08
 
 ### 🚀 Features
