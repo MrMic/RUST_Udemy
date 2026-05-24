@@ -1,3 +1,12 @@
+## [5.44.1] - 2026-05-24
+
+### 🚀 Features
+
+- *(option)* Add Option crate with grade lookup example
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Update CHANGELOG.md
 ## [5.41.1] - 2026-05-16
 
 ### 🚀 Features
