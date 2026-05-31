@@ -7,6 +7,8 @@
 ### ⚙️ Miscellaneous Tasks
 
 - *(changelog)* Update CHANGELOG.md
+- *(changelog)* Update CHANGELOG.md
+- *(license)* Add MIT license to workspace and missing crates
 ## [5.44.1] - 2026-05-24
 
 ### 🚀 Features
