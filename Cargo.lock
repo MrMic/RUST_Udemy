@@ -11,6 +11,10 @@ name = "Option"
 version = "0.1.0"
 
 [[package]]
+name = "Result"
+version = "0.1.0"
+
+[[package]]
 name = "borrowing"
 version = "0.1.0"
 
