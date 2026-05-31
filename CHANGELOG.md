@@ -1,3 +1,12 @@
+## [unreleased]
+
+### 🚀 Features
+
+- *(result)* Add Result crate with grade lookup example
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Update CHANGELOG.md
 ## [5.44.1] - 2026-05-24
 
 ### 🚀 Features
