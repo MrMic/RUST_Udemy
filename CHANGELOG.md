@@ -3,12 +3,14 @@
 ### 🚀 Features
 
 - *(result)* Add Result crate with grade lookup example
+- *(workspace)* Add HashMaps crate and fix workspace Cargo.toml
 
 ### ⚙️ Miscellaneous Tasks
 
 - *(changelog)* Update CHANGELOG.md
 - *(changelog)* Update CHANGELOG.md
 - *(license)* Add MIT license to workspace and missing crates
+- *(changelog)* Update CHANGELOG.md
 ## [5.44.1] - 2026-05-24
 
 ### 🚀 Features
