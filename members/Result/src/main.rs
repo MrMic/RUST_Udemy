@@ -1,18 +1,18 @@
 // NOTE:
-//----------------------------------------------------------------------------
-// RESULT:
-// enum Result<T, E> {
-//    Ok(T),
-//    Err(E),
-//    }
-//  ----------------------------------------------------------------------------
+/////////////////////////
+// RESULT:             //
+// enum Result<T, E> { //
+//    Ok(T),           //
+//    Err(E),          //
+//    }                //
+/////////////////////////
 
 struct Student {
     name: String,
     grade: Option<u32>,
 }
 
-// INFO: Check if the student exists in the database
+// NOTE: Check if the student exists in the database
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // fn check_student(student_name: &String, student_db: &Vec<Student>) -> Result<(), String> { //
 //     for student in student_db {                                                            //

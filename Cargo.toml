@@ -1,4 +1,14 @@
 [workspace]
-members = ["members/Enums", "members/Option", "members/Result","members/borrowing", "members/dereferencing","members/ownership","members/quick_startup", "members/structs-basics"]
+members = [
+    "members/Enums",
+    "members/HashMaps",
+    "members/Option",
+    "members/Result",
+    "members/borrowing",
+    "members/dereferencing",
+    "members/ownership",
+    "members/quick_startup",
+    "members/structs-basics",
+]
 
 resolver = "3"
