@@ -2,6 +2,8 @@
 // NOTE: HASHMAPS //
 ////////////////////
 
+mod student;
+
 use std::collections::HashMap;
 
 fn main() {
@@ -32,4 +34,34 @@ fn main() {
         "HashMaps after trying to insert 'Rust' again: {:?}",
         word_counts
     );
+
+    // NOTE: EXERCISE: Implement a student database using HashMap
+    println!("\n--- Student Database ---");
+
+    let mut student_database: HashMap<i32, student::Student> = HashMap::new();
+    student::add_student(
+        &mut student_database,
+        1,
+        String::from("John"),
+        17,
+        String::from("Grade 11"),
+    );
+
+    student::add_student(
+        &mut student_database,
+        2,
+        String::from("Sarah"),
+        16,
+        String::from("Grade 10"),
+    );
+
+    // Printing the student database
+
+    for (id, student) in &student_database {
+        println!("Student ID: {}", id);
+        println!("Name: {}", student.name);
+        println!("Age: {}", student.age);
+        println!("Grade: {}", student.grade);
+        println!("------------------");
+    }
 }
