@@ -15,6 +15,10 @@ name = "HashMaps"
 version = "0.1.0"
 
 [[package]]
+name = "Method_Chaining"
+version = "0.1.0"
+
+[[package]]
 name = "Option"
 version = "0.1.0"
 

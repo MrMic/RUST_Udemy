@@ -1,7 +1,7 @@
 [workspace]
 members = ["members/Casting",
     "members/Enums",
-    "members/HashMaps",
+    "members/HashMaps", "members/Method_Chaining",
     "members/Option",
     "members/Result",
     "members/borrowing",

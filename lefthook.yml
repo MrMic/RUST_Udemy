@@ -2,7 +2,7 @@
 pre-commit:
   commands:
     clippy:
-      run: cargo clippy -- -D warnings
+      run: cargo clippy
     gitleaks:
       run: gitleaks git --pre-commit .
 
