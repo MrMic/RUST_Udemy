@@ -1,4 +1,4 @@
-## [5.51.1] - 2026-06-13
+## [5.51.1] - 2026-06-14
 
 ### 🚀 Features
 
@@ -7,12 +7,14 @@
 - *(hashmaps)* Add student database exercise with hashmap
 - *(workspace)* Add casting member crate
 - *(workspace)* Add method chaining example module
+- *(workspace)* Add pattern matching module
 
 ### ⚙️ Miscellaneous Tasks
 
 - *(changelog)* Update CHANGELOG.md
 - *(changelog)* Update CHANGELOG.md
 - *(license)* Add MIT license to workspace and missing crates
+- *(changelog)* Update CHANGELOG.md
 - *(changelog)* Update CHANGELOG.md
 - *(changelog)* Update CHANGELOG.md
 - *(changelog)* Update CHANGELOG.md
