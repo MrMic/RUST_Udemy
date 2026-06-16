@@ -1,3 +1,9 @@
+## [unreleased]
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Update CHANGELOG.md
+- *(members)* Add MIT license to cargo manifests
 ## [5.52.1] - 2026-06-16
 
 ### 🚀 Features
