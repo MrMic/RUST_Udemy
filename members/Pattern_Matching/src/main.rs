@@ -2,6 +2,7 @@
 // INFO: PATTERN MATCHING CONTEXTS
 // ----------------------------------------
 
+#[allow(irrefutable_let_patterns, unused_variables)]
 fn main() {
     // INFO: 1. Match Expression
     let x = 3;
@@ -35,7 +36,7 @@ fn main() {
     // NOTE: Pattern: Variable
 
     // INFO: 3. while let
-    let numbers = vec![1, 2, 2, 3];
+    let numbers = [1, 2, 2, 3];
     let mut i = 0;
     while let 2 = numbers[i] {
         println!("Found a value 2 at index : {}", i);
