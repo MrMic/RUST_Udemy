@@ -1,14 +1,18 @@
 [workspace]
-members = ["members/Casting",
-    "members/Enums",
-    "members/HashMaps", "members/Method_Chaining",
-    "members/Option", "members/Pattern_Matching",
-    "members/Result",
-    "members/borrowing",
-    "members/dereferencing",
-    "members/ownership",
-    "members/quick_startup",
-    "members/structs-basics",
+members = [
+  "members/Casting",
+  "members/Destructured_Struct_Parameters",
+  "members/Enums",
+  "members/HashMaps",
+  "members/Method_Chaining",
+  "members/Option",
+  "members/Pattern_Matching",
+  "members/Result",
+  "members/borrowing",
+  "members/dereferencing",
+  "members/ownership",
+  "members/quick_startup",
+  "members/structs-basics",
 ]
 
 resolver = "3"
